@@ -23,7 +23,7 @@ public class AnnotationsMap {
     private Map<String, Class> hashMap = new HashMap<String, Class>();
 
     public AnnotationsMap(){
-        Reflections reflections = new Reflections();
+        Reflections reflections = new Reflections("");
         Set<Class<?>> classes = reflections.getTypesAnnotatedWith(ServletAnnotation.class);
         for(Class cls : classes){
             ServletAnnotation annotation = (ServletAnnotation) cls.getAnnotation(ServletAnnotation.class);
